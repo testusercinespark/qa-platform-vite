@@ -1,10 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
+import { supabase } from './supabase'
+
 
 // ─── STYLES ───────────────────────────────────────────────────────────────────
 const css = `
