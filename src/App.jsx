@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const SUPABASE_URL = "https://omaftstnteztshpxyhtf.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9tYWZ0c3RudGV6dHNocHh5aHRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIxODY3MTEsImV4cCI6MjA4Nzc2MjcxMX0.XTDw-p84OLStu8BcBFB_CZVP3shhuQIEr7MDK_4KOAM";
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_ANON_KEY
+);
 
 // ─── STYLES ───────────────────────────────────────────────────────────────────
 const css = `
